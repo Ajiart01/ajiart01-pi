@@ -1,26 +1,12 @@
-FROM node:16
+FROM node:16.13.0
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-  build-essential \
-  libcairo2-dev \
-  libpango1.0-dev \
-  libjpeg-dev \
-  libgif-dev \
-  librsvg2-dev
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install nodejs -y
 
-# Set working directory
-WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install app dependencies
+WORKDIR /app
+COPY . /app
+RUN npm install caxinha@0.2.56
 RUN npm install
-
-# Copy app source code
-COPY . .
-
-# Expose port and start the app
-EXPOSE 80
-CMD ["npm", "start"]
+CMD ["node", "app.js"]
+EXPOSE 6892
