@@ -1,7 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "app.js", "use": "@vercel/node" }
+    {
+      "src": "app.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["package.json", "package-lock.json"],
+        "installCommand": "npm install --build-from-source --verbose"
+      }
+    }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/" }
