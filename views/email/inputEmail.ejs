@@ -1,0 +1,44 @@
+<section id="pricing">
+    <div class="row pricing-content">
+        <center>
+            <%- include('../layouts/msg')  %> 
+            <%- include('../layouts/errors')  %> 
+        </center>
+    </div>
+    <div class="row pricing-content">
+        <center>
+            <form method="POST" action="/auth/emailchange">
+                <h2>CHANGE EMAIL</h2>
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="email" type="email" class="form-control" value="<%= email %>" readonly>
+                </div>
+                <!-- <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="email" type="email" class="form-control" placeholder="&#xf0e0;   Email" required>
+                </div> -->
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="newemail" type="email" class="form-control" placeholder="&#xf0e0;   New Email" required>
+                </div>
+                <p> </p>
+                <button type="submit" class="button button-primary">Change Gmail</button>
+            </form>	
+
+            <form method="POST" action="/users/changepass">
+                <h2>CHANGE PASSWORD</h2>
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="email" type="email" class="form-control" value="<%= email %>" readonly>
+                </div>
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="&#xf13e;   Old Password" required>
+                </div>
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="newpassword" type="password" class="form-control" placeholder="&#xf13e;   New Password" required>
+                </div>
+                <div class="form-group">
+                    <input style="font-family:Arial, FontAwesome" name="confirmpassword" type="password" class="form-control" placeholder="&#xf13e;   Confirm New Password" required>
+                </div>
+                <p> </p>
+                <button type="submit" class="button button-primary">Change Password</button>
+            </form>	
+        </center>      
+    </div>
+</section>

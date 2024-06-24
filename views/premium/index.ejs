@@ -1,0 +1,142 @@
+<main class="content">
+				<div class="container-fluid p-0">
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Premium</h1>
+					</div>
+<div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                        <h4 class="card-title">Add Premium</h4>
+                    <form class="forms-sample" action="/addprem" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Expired</label>
+                        <input type="text" class="form-control" name="expired" placeholder="Example : 30d = 30 Days, 1m = 1 Month" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Custom Key</label>
+                        <input type="text" class="form-control" name="customKey" placeholder="Apikey custom" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Token</label>
+                        <input type="text" class="form-control" name="token" placeholder="Token" required>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                      </div>
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+               <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Delete Premium</h4>
+                    <form class="forms-sample" action="/delprem" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Token</label>
+                        <input type="text" class="form-control" name="token" placeholder="token" required>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                      </div>
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+               <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Custom Apikey</h4>
+                    <form class="forms-sample" action="/custom-key" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Custom Key</label>
+                        <input type="text" class="form-control" name="customKey" placeholder="Apikey custom" required>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                      </div>
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>            
+               <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Reset One Limit</h4>
+                    <form class="forms-sample" action="/limit-key" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Token</label>
+                        <input type="text" class="form-control" name="token" placeholder="token" required>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                      </div>
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+               <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Reset All Limit</h4>
+                    <form class="forms-sample" action="/resetall" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Token</label>
+                        <input type="text" class="form-control" name="token" placeholder="token" required>
+                      </div>
+                      </br>
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>       
+        </div>
+      </div>
+    </div>
+    	<!-- Footer -->
+			<footer class="footer">
+				<script type="text/javascript">
+   				 var det = new Date();
+    				var tahun = det.getFullYear();
+    				year = tahun;
+				</script>
+				<div class="container-fluid">
+					<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © <script>document.write(year);</script>
+					<a href="https://marin.my.id" target="_blank"
+						>Marin Kitagawa</a
+					>. All rights reserved.
+				</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+				
+			<!-- Back To Top -->
+      	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      	  <!-- End Back To Top -->
+        </div>
+      </div>
+    </div>
+</script>

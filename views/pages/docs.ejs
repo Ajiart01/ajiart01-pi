@@ -1,0 +1,166 @@
+   	<main class="content" id="apikey">
+			<div class="container-fluid p-0">	
+				
+					<div class="row">
+						<div class="col-md-10 col-xl-8 mx-auto">
+							<h1 class="text-center"></h1>
+							<p class="lead text-center mb-4"></p>
+
+							<div class="row justify-content-center mt-3 mb-2">
+								<div class="col-auto">
+									<nav class="nav btn-group">
+									</nav>
+								</div>
+							</div>
+								<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">TOTAL USER</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															 <span class="mdi mdi-account-check icon-item faa-tada animated"></span>
+														</div>
+													</div>
+												</div>
+													<h3 class="mt-1 mb-2"><b><%= userTotal %></b></h3> 
+												<div class="mb-0">
+													<span class="text-muted">Total User</span>
+												</div>
+											</div>
+										</div>
+							     	<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">TODAY REQUEST</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															 <span class="mdi mdi-arrow-top-right icon-item faa-tada animated"></span>
+														</div>
+													</div>
+												</div>
+													<h3 class="mt-1 mb-2"><b><%= today %></b></h3> 
+												<div class="mb-0">
+													<span class="text-muted">Today Request</span>
+												</div>
+											</div>
+										</div>
+					                   	<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">TOTAL REQUEST</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															 <span class="mdi mdi-chart-line icon-item faa-tada animated"></span>
+														</div>
+													</div>
+												</div>
+													<h3 class="mt-1 mb-2"><b><%= total %></b></h3> 
+												<div class="mb-0">
+													<span class="text-muted">Total Request</span>
+												</div>
+											</div>
+										</div>
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col mt-0">
+													 <h5 class="card-title">VISITOR</h5>														
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															 <span class="mdi mdi-eye icon-item faa-tada animated"></span>
+														</div>
+													</div>
+												</div>											    
+                                           	  	<h3 class="mt-1 mb-2"><b><%= visitor %></b></h3>                         
+											   <div class="mb-0">
+													<span class="text-muted">Total Visitor</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">						
+							<div class="card-body">
+							<form action="/api/checkkey">
+						   <div class="h6 mb-0 font-weight-bold text-dark-800 text-uppercase">						   
+   <h5 class="mt-1 mb-2"><b   font-weight-bold  text-primary">CEK APIKEY</b></h5>
+  </div>
+  
+						
+							 <input type="<%= apikey %>" class="form-control" placeholder="<%= apikey %>" name="apikey" required=""><br>
+						<button class="btn btn-primary btn-icon-split">
+ <span class="icon text-white-50">
+  <i class="fas fa-check"></i>
+ </span>
+ <span class="text">Submit</span>
+</button>
+							</form>
+						</div>
+					</div>
+																							
+      <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+              <div class="card-body">
+            
+             
+               <h5 class="mt-1 mb-2"><b   font-weight-bold  text-primary">Thanks To</b></h5>  
+<li class="currently font-weight-bold text-gray-600">My Ortu</li>          
+<li class="currently font-weight-bold text-gray-600">Jhnspntx (gweh)</li>  
+<li class="currently font-weight-bold text-gray-600">Papah-Chan (partner)</li>  
+<li class="currently font-weight-bold text-gray-600">My parents</li>
+<li class="currently font-weight-bold text-gray-600">Corona & Kit For Template</li> 
+<li class="currently font-weight-bold text-gray-600">Penyedia Module Api</li> 
+<li class="currently font-weight-bold text-gray-600">
+  Dan kalian semua yang telah menggunakan web ini dengan bijak dan selalu mendukung saya. 
+                   </div>
+                  </div>
+                  </div>    
+                     <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+              <div class="card-body">
+            
+              <h5 class="mt-1 mb-2"><b   font-weight-bold  text-primary">S & K</b></h5>  
+                       
+            <li class="currently font-weight-bold text-gray-600">Jangan Spam/Floading Request!</li>
+<li class="currently font-weight-bold text-gray-600">Owner dapat sewaktu waktu mengubah ketentuan di website ini, demi menjaga kualitas website</li>
+<li class="currently font-weight-bold text-gray-600">Dilarang keras untuk menyebarkan apikey Anda, jika ketahuan.akan kami block :)</li>           
+<li class="currently font-weight-bold text-gray-600">Jangan Pernah Sesekali Menembak Api!!Jika Ketahuan Tanggung Sendiri Akibatnya</li>
+<li class="currently font-weight-bold text-gray-600">Owner tidak bertanggung jawab atas apa yang Anda lakukan dalam penggunaan website ini</li>
+<li class="currently font-weight-bold text-gray-600">Jika Ada Fitur Eror Segera Lapor Owner!</li>                               
+              </div>                 
+              </div> 
+              </main>                                                                
+      		<!-- Footer -->
+			<footer class="footer">
+				<script type="text/javascript">
+   				 var det = new Date();
+    				var tahun = det.getFullYear();
+    				year = tahun;
+				</script>
+				<div class="container-fluid">
+					<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © <script>document.write(year);</script>
+					<a href="https://marin.my.id" target="_blank"
+						>Marin Kitagawa</a
+					>. All rights reserved.
+				</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+				
+			<!-- Back To Top -->
+      	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      	  <!-- End Back To Top -->
+        </div>
+      </div>
+    </div>
+</script>

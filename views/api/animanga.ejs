@@ -1,0 +1,215 @@
+<main class="content">
+  <div class="container-fluid p-0">					
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-header">
+                  
+                      <h1 class="h3 mb-3">Animanga Documentation</h1>
+                  
+                  
+                  <div class="table-responsive">
+                      <table class="table mb-0">
+                          <thead>
+                              <tr>
+                                  <thead>
+                          <tr>
+                          <th>Fitur Name</th>
+        <th>Request Method</th>	
+        <th>Description</th>	
+        <th>Query Parameter</th>																			
+       <th>Status</th>
+        <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>						                                      
+          <tr>
+              <td>Nhentai</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get detail, and read online from nhentai ( NSFW )</td>
+              <td>apikey,code</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/nhentai?code=147476&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+             <td>Nhentai PDF</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get pdf file from nhentai ( NSFW )</td>
+              <td>apikey,code</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/nhentaipdf?code=379510&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Nhentai Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Search doujin from nhentai ( NSFW )</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/nhsearch?query=gotoubun&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+             <td>Doujindesu</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Get detail, and read online from Doujindesu ( NSFW )</td>
+            <td>apikey,url</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/doujindetail?url=https://doujindesu.xxx/manga/tonari-no-okaasan/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+            <td>Doujindesu PDF</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get pdf file from doujindesu ( NSFW )</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/doujindesu?url=https://doujindesu.xxx/tonari-no-okaasan/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Doujindesu Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Doujindesu scraper ( NSFW )</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/doudesusearch?query=gotoubun&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Doujindesu Latest</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Doujindesu scraper ( NSFW )</td>
+              <td>apikey</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/doujinlatest?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Kusonime Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Search and get detail from kusonime</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/kusonime?query=boruto&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Mynimeku</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get Detail from Mynimeku</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/animeinfo?url=https://www.mynimeku.com/anime/sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Mynimeku Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Search and get detail from Mynimeku</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/mynimekusearch?query=non non biyori&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Komik Latest</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Komik Latest</td>
+            <td>apikey</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/komiklatest?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Komik Download</td>
+          <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+          <td>Komik Download</td>
+          <td>apikey,url</td>
+          <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+          <td><a target="_blank" href="api/animanga/komikdl?url=https://www.mynimeku.com/chapter-komik/hitoribocchi-no-isekai-kouryaku-chapter-01-bahasa-indonesia/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+        </tr>
+        <td>Hanime Latest</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Hanime Latest ( NSFW )</td>
+            <td>apikey</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/hanimelatest?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Mynimeku Latest</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Mynimeku Latest</td>
+            <td>apikey</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/mynimekulatest?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Nekopoi</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Get detail from Nekopoi ( NSFW )</td>
+            <td>apikey,code</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/nekopoi?code=18057&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Nekopoi Latest</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Nekopoi Latest ( NSFW )</td>
+            <td>apikey</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/nekopoilasted?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Nekopoi Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Search anime from nekopoi ( NSFW )</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/nekopoisearch?q=hentai&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Nekopoi Download</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Nekopoi Downloader ( NSFW )</td>
+              <td>apikey,code</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/nekopoi?code=27751&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Otakudesu</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get detail from otakudesu</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/otakudesu?apikey=<%= apikey %>&url=https://otakudesu.lol/anime/inu-suki-hirowareta-sub-indo/" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Otakudesu Search</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Search And Get detail from otakudesu</td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/animanga/otakudesu-search?apikey=<%= apikey %>&q=anime" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Otakudesu Download</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Otakudesu Downloader</td>
+            <td>apikey,url</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/otakudesu-download?apikey=<%= apikey %>&url=https://otakudesu.lol/episode/sdhsu-s2-episode-1-sub-indo/" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+          <td>Otakudesu Latest</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Otakudesu Latest</td>
+            <td>apikey</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/animanga/otakudesu-latest?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr>
+      </tr>
+      </tbody>
+    </table>
+    </td>
+  </div>
+</div>
+</div>
+</ul>
+</main>                                                                
+<!-- Footer -->
+<footer class="footer">
+  <script type="text/javascript">
+      var det = new Date();
+      var tahun = det.getFullYear();
+      year = tahun;
+  </script>
+  <div class="container-fluid">
+      <div class="footer-wrap pd-20 mb-20 card-box">
+      Copyright © <script>document.write(year);</script>
+      <a href="https://marin.my.id" target="_blank"
+          >Marin Kitagawa</a
+      >. All rights reserved.
+  </div>
+  </div>
+</footer>
+<!-- End Footer -->
+  
+<!-- Back To Top -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- End Back To Top -->
+</div>
+</div>
+</div>
+</script>
+

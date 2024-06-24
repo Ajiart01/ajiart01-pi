@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="settings, free rest api bot whatsapp, whatsapp bot api">
+	<meta name="author" content="Marin Api | Pricing">
+	<meta name="keywords" content="settings, free rest api bot whatsapp, whatsapp bot api">
+		
+	<!-- ICON -->
+	<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    
+    <!-- FONTS -->
+    <link rel="stylesheet" href="css/font.css?family=Inter:wght@300;400;600&display=swap">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	
+	<!-- DASHBOARD -->
+	<link rel="stylesheet" href="css/style.css" class="js-stylesheet"> 
+
+	<!-- IMG -->
+	<link rel="shortcut icon" href="img/icons/1.png">
+	
+	<!-- TITLE -->
+	<title>Marin Api</title>
+	
+	<!-- AUDIO AUTO PLAY -->
+
+</head>
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="#">
+						<span class="sidebar-brand-text align-middle">
+						Marin Api
+					</span>
+				<svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewbox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF" style="margin-left: -3px">	
+							<path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
+						<path d="M20 12L12 16L4 12"></path>
+						<path d="M20 16L12 20L4 16"></path>
+					</svg>
+				</a>
+			
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/docs">
+							<i class="align-middle" data-feather="home"></i><span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/profile">
+							<i class="align-middle" data-feather="user"></i><span class="align-middle">Profile</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/price">
+							<i class="align-middle fa fa-fw bx bx-money"></i><span class="align-middle">Pricing</span>
+						</a>
+					</li>	
+					 </li>	
+	     <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/changelog">
+          <span class="menu-icon">
+          <i class="mdi mdi-biohazard"></i>
+          </span>
+          <span class="menu-title">Changelog</span>
+          </a>
+          </li>	
+		  <ul class="sidebar-nav">
+			<li class="sidebar-header">
+				Admin
+			</li>
+					 <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/premium">
+          <span class="menu-icon">
+          <i class="mdi mdi-check-circle"></i>
+          </span>
+          <span class="menu-title">Premium</span><span class="sidebar-badge badge bg-primary">Admin</span>
+          </a>
+          </li>	
+           <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/listuser">
+          <span class="menu-icon">
+          <i class="mdi mdi-account-card-details"></i>
+          </span>
+          <span class="menu-title">List User</span><span class="sidebar-badge badge bg-primary">Admin</span>
+          </a>
+          </li>																		
+					<li class="sidebar-header">
+						Info
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/report-bug">
+							<i class="align-middle fa fa-fw bx bx-bug"></i><span class="align-middle">Report Bug</span>
+						</a>
+					</li>
+						<li class="sidebar-item">
+						<a href="#donasi" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="mdi mdi-cash-usd"></i><span class="align-middle">Donasi</span>
+						</a>
+						<ul id="donasi" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"> <a class="sidebar-link"href="https://saweria.co/jhnspntx">Saweria</a></li>
+							<li class="sidebar-item"> <a class="sidebar-link"href="https://sociabuzz.com/johannes/donate">Sociabuzz</a></li>
+                 
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/botwa">
+							<i class="align-middle bx bx-bot"></i><span class="align-middle">Example Bot</span><span class="sidebar-badge badge bg-primary">On</span>
+						</a>
+					</li>										
+					<li class="sidebar-item">
+						<a href="#web" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle bx bx-globe"></i><span class="align-middle">Web</span>
+						</a>
+						<ul id="web" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="https://wa.me/19294427777">WhatsApp<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/gcbot">Group WhatsApp<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/botwa">Example Bot<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://github.com/johannes2803">Script Bot<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://marin.my.id">Website<span class="sidebar-badge badge bg-primary">On</span></a></li>						
+						</ul>
+					</li>
+					
+					<li class="sidebar-item">
+						<a href="#cs" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-headset"></i><span class="align-middle">Customer Service</span>
+						</a>
+						<ul id="cs" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="https://wa.me/19294427777?text=hallo+kak, saya ingin menyampaikan masalah nih.">WhatsApp on 24h<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/gcbot">Gc WhatsApp on 24h<span class="sidebar-badge badge bg-primary">On</span></a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-header">
+						Main
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/statistic">
+							<i class="align-middle bx bx-coin-stack"></i><span class="align-middle">Statistic</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/runtime">
+							<i class="align-middle bx bx-time"></i><span class="align-middle">Runtime</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/uptime">
+							<i class="align-middle bx bx-timer"></i><span class="align-middle">Uptime</span>
+						</a>
+					</li>			       
+          <li class="sidebar-item sidebar-category">
+         	<li class="sidebar-header">
+						Api Features
+					</li>
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="/download">
+            <span class="menu-icon">
+            <i class="mdi mdi-download "></i>
+            </span>
+            <span class="menu-title">Download</span>
+            </a>
+          </li>
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="/search">
+            <span class="menu-icon">
+            <i class="mdi mdi-magnify"></i>
+            </span>
+            <span class="menu-title">Search</span>
+            </a>
+             </li>
+             <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/animanga">
+          <span class="menu-icon">
+            <i class="mdi mdi-crown"></i>
+          </span>
+          <span class="menu-title">Anime Manga</span>
+          </a>
+          </li>
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="/anime">
+            <span class="menu-icon">
+            <i class="mdi mdi-chemical-weapon "></i>
+            </span>
+            <span class="menu-title">Anime</span>
+            </a>
+            </li>
+            <li class="sidebar-item menu-items">
+              <a class="sidebar-link" href="/nsfw">
+              <span class="menu-icon">
+              <i class="mdi mdi-fire"></i>
+              </span>
+              <span class="menu-title">Nsfw</span>
+              </a>
+              </li>  
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="/stalk">
+            <span class="menu-icon">
+            <i class="mdi mdi-gmail "></i>
+            </span>
+            <span class="menu-title">Stalking</span>
+            </a>
+            </li>
+              <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/creator">
+          <span class="menu-icon">
+          <i class="mdi mdi-image"></i>
+          </span>
+          <span class="menu-title">Creator</span>
+          </a>
+           </li>
+               <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/entertainment">
+          <span class="menu-icon">
+          <i class="fa fa-fw fa-smile "></i>
+          </span>
+          <span class="menu-title">Entertainment</span>
+          </a>
+          </li>    
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="/primbon">
+            <span class="menu-icon">
+            <i class="mdi mdi-ghost"></i>
+            </span>
+            <span class="menu-title">Primbon</span>
+            </a>
+             </li> 
+            <li class="sidebar-item menu-items">
+          <a class="sidebar-link" href="/other">
+          <span class="menu-icon">
+          <i class="fa fa-fw fa-random"></i>
+          </span>
+          <span class="menu-title">Other</span>
+          </a>
+           </li>                      
+               <li class="sidebar-item sidebar-category">
+         	<li class="sidebar-header">
+						Contact Me
+					</li>
+          </li>
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="https://github.com/johannes2803">
+              <span class="menu-icon">
+                <i class="mdi mdi-github-circle "></i>
+              </span>
+              <span class="menu-title">Github</span>
+            </a>
+          </li>
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="https://wa.me/19294427777">
+              <span class="menu-icon">
+                <i class="mdi mdi-whatsapp "></i>
+              </span>
+              <span class="menu-title">WhatsApp</span>
+            </a>
+          </li>          
+          <li class="sidebar-item menu-items">
+            <a class="sidebar-link" href="https://instagram.com/johannes28_">
+              <span class="menu-icon">
+                <i class="mdi mdi-instagram "></i>
+              </span>
+              <span class="menu-title">Instagram</span>
+            </a>
+          </li>   
+           </li>    
+            </li>          
+		</nav>
+
+
+	<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">					  					 						<i class="hamburger align-self-center"></i>
+				</a>Marin API
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+							<i class="align-middle" data-feather="search"></i>
+						</button>
+					</div>
+				</form>
+
+						<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="message-square"></i>
+									<span class="indicator">9+</span>
+								</div> 
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<center>
+                 	  			 <iframe src="https://my.cbox.ws/MarinApi" width="90%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                  				</center>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Close message</a>
+								</div>
+							</div>
+						</li>
+						<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">4</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									4 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-feather="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Date of manufacture</div>
+												<div class="text-muted small mt-1">New Ui Template For Admin Kit</div>
+												<div class="text-muted small mt-1">1 Weeks ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-warning" data-feather="arrow-up"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Publication date</div>
+												<div class="text-muted small mt-1">Marin Kitagawa Published this app</div>
+												<div class="text-muted small mt-1">1 Weeks ago</div>
+											</div>
+										</div>
+									</a>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Report Bug</div>
+												<div class="text-muted small mt-1">Jika Ada Bug Silahkan Lapor Owner</div>
+												<div class="text-muted small mt-1">1 weeks ago</div>
+											</div>
+										</div>	
+										<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Req Fitur</div>
+												<div class="text-muted small mt-1">Mau Req Fitur Di Api?Lapor Owner Untuk Request</div>
+												<div class="text-muted small mt-1">1 weeks ago</div>
+											</div>								
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Close all notifications</a>
+								</div>
+							</div>
+						</li>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+								<img src="img/avatars/1.png" class="avatar img-fluid rounded" alt="Marin Kitagawa">
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>							
+								<a class="dropdown-item" href="https://wa.me/19294427777?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/users/logout">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+
+          <!--  FUNCTION -->
+  
+
+      	<%- body %>
+
+	
+
+	
+	</script>
+	<script src="vendors/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dash.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/clock.js"></script>
+
+</body>
+</html>

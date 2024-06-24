@@ -1,0 +1,87 @@
+<div class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">                
+                	<h1 class="card-title">List User</h1>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <tr>
+                          <th>Username</th>
+                       
+                          <th class="text-center">Limit</th>
+                            <th class="text-center">Ip Address</th>
+                          <th>Status</th>
+                          <th class="text-center">Premium</th>
+                          <th class="text-center">Email</th>
+                          <th class="text-center">Apikey</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% for(var i = 0; i < List.length; i++) { %>
+                        <tr>
+                          <td><%= List[i].username %></td>
+                                           
+                          <td style="color: #0000f2" class="text-center">
+                           
+                              <%= List[i].limit %>
+                                 <td style="color: #0000f2" class="text-center">
+                           
+                              <%= List[i].ip %>
+                              
+                         </td>
+                         <td><% if(List[i].status !== null) { %>
+                         Active
+                         <% } else { %>
+                         Not Active
+                         <% } %>
+                          </td>
+                          <td style="color: #f20045" class="text-center">
+                         <% if(List[i].premium !== null) { %>
+                         Premium User
+                         <% } else { %>
+                         Free User
+                         <% } %>
+                          </td>
+                          <td><%= List[i].email %></td>
+                          <td><%= List[i].apikey %></td>
+                        </tr>
+                        <% } %>
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        	<!-- Footer -->
+			<footer class="footer">
+				<script type="text/javascript">
+   				 var det = new Date();
+    				var tahun = det.getFullYear();
+    				year = tahun;
+				</script>
+				<div class="container-fluid">
+					<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © <script>document.write(year);</script>
+					<a href="https://marin.my.id" target="_blank"
+						>Marin Kitagawa</a
+					>. All rights reserved.
+				</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+				
+			<!-- Back To Top -->
+      	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      	  <!-- End Back To Top -->
+        </div>
+      </div>
+    </div>
+</script>

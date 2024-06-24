@@ -1,0 +1,21 @@
+<% if (success_msg != '') { %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script type="text/javascript">
+     Swal.fire(
+  'Success',
+  '<%- success_msg %>',
+  'success'
+)
+</script>
+<% } %>
+
+<% if (error_msg != '') { %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script type="text/javascript">
+     Swal.fire(
+  'Warning',
+  '<%- error_msg %>',
+  'error'
+)
+</script>
+<% } %>
