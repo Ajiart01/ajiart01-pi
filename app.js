@@ -1,3 +1,4 @@
+__path = process.cwd()
 //==========[Module Api]=========\\
 const express = require('express');
 const app = express();
@@ -94,7 +95,7 @@ app.use(function(req, res, next) {
 
 //==========[Tampilan Awal]=========\\
 app.get("/", async (req, res) => {
-	res.sendFile(process.cwd() + "/views/index.html");
+	res.sendFile(__path + "/views/index.html");
 });
 
 //==========[Halaman Awal]===========\\
