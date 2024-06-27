@@ -3,8 +3,8 @@ const favicon = require('serve-favicon');
 const express = require('express');
 
 //Summon Module Dll 
-const creator = "Marin Kitagawa"
-const author = "Marin Kitagawa"
+const creator = "BGS BOT "
+const author = "BGS BOT "
 const neoxr = "yntkts"
 const zeks = "administrator"
 const zeks2 = "apivinz"
