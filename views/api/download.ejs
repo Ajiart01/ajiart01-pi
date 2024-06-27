@@ -4,7 +4,7 @@
                 <div class="card">
                     <div class="card-header">
                     
-                        <h1 class="h3 mb-3">Nsfw Documentation</h1>
+                        <h1 class="h3 mb-3">Downloader Documentation</h1>
                     
                     
                     <div class="table-responsive">
@@ -19,278 +19,119 @@
           <th>Query Parameter</th>																			
          <th>Status</th>
           <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>						                                      
-          <tr>
-            <td>Ahegao</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>						                                      
+            <tr>
+              <td>Playmp3</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Youtube Play Music </td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/playmp3?query=kokoronashi&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <tr>
+              <td>Playmp4</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Youtube Play Video </td>
+              <td>apikey,query</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/playmp4?query=kokoronashi&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <tr>
+           <td>Ytmp3</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Youtube Music </td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/ytmp3?url=https://youtu.be/jRrg3iO6HoY&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <tr>
+         <td>Ytmp4</td>
+           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+           <td>Youtube Video</td>
+           <td>apikey,url</td>
+           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/download/ytmp4?url=https://youtu.be/jRrg3iO6HoY&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+          </tr> 
+          <td>Facebook</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Facebook</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/facebook?url=https://www.facebook.com/Dream.of.the.Lantern/videos/458233859661012/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Instagram</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Instagram Video</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/instagram?url=https://www.instagram.com/reel/CqeU7dDOioO/?utm_source=ig_web_copy_link/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Mediafire</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Get detail and alternative download link</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/mediafire?url=https://www.mediafire.com/file/52zlltm8cnzdshv/PNTX-PS.txt/file/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Tiktok</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Tiktok Downloader</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/tiktok?url=https://www.tiktok.com/@farhanaditiass/video/7209659479619587354?is_from_webapp=1&sender_device=pc&web_id=7152555593969206786/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Pinterest</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Pinterest Downloader</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/pindl?url=https://id.pinterest.com/pin/361906520063070744&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Twitter</td>
+              <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+              <td>Twitter Downloader</td>
+              <td>apikey,url</td>
+              <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+              <td><a target="_blank" href="api/download/twitter?url=https://twitter.com/DellaArifah/status/1645431677878149127?s=20/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>       
+            <td>Pixiv</td>
             <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-            <td>Random Ashegao Image ( NSFW )</td>
-            <td>apikey</td>
+            <td>Pixiv Downloader</td>
+            <td>apikey,id,ext</td>
             <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/ahegao?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr>
-         <td>Ass</td>
+            <td><a target="_blank" href="api/download/pixiv?id=94216857&ext=.jpg&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>SFile Mobi</td>
             <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-            <td>Random Ass Image ( NSFW )</td>
-            <td>apikey</td>
+            <td>Get detail and alternative download link</td>
+            <td>apikey,url</td>
             <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/ass?apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr>
-          <tr>
-          <td>Anal</td>
-           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-           <td>Random Anal ( NSFW )</td>
-           <td>apikey</td>
-           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/anal?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr> 
-           <td>Blowjob</td>
-           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-           <td>Random Blowjob ( NSFW )</td>
-           <td>apikey</td>
-           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/blowjob?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr> 
-           <td>Bdsm</td>
-           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-           <td>Random Bdsm Image ( NSFW )</td>
-           <td>apikey</td>
-           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/bdsm?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr> 
-          <td>Boobjob</td>
-          <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-          <td>Random Boobjob Image ( NSFW )</td>
-          <td>apikey</td>
-          <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-           <td><a target="_blank" href="api/nsfw/boobjob?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-         </tr>
-         <td>Boobs</td>
-          <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-          <td>Random Boobs Image ( NSFW )</td>
-          <td>apikey</td>
-          <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-           <td><a target="_blank" href="api/nsfw/boobs?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-         </tr> 
-          <td>Classic</td>
-           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-           <td>Random Classic ( NSFW )</td>
-           <td>apikey</td>
-           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/classic?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr> 
-          <td>Cum</td>
-           <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-           <td>Random Cum Image ( NSFW )</td>
-           <td>apikey</td>
-           <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-            <td><a target="_blank" href="api/nsfw/cum?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-          </tr> 
-          <td>Creampie</td>
-          <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-          <td>Random Creampie Image ( NSFW )</td>
-          <td>apikey</td>
-          <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-           <td><a target="_blank" href="api/nsfw/creampie?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-         </tr> 
-          <td>Cuckold</td>
-          <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-          <td>Random Cuckold Image ( NSFW )</td>
-          <td>apikey</td>
-          <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-           <td><a target="_blank" href="api/nsfw/cuckold?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-         </tr> 
-         <td>Ecchi</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Ecchi Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/ecchi?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Ero</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Ero Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/ero?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Ero V2</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Ero Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/ero2?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Elves</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Elves Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/elves?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-         <td>Femdom</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Femdom Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/femdom?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Footjob</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Footjob Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/footjob?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Glasses</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Glasses Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/glasses?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-        <td>Gangbang</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Gangbang Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/gangbang?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr> 
-         <td>Gif</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Gif ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/gif?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr>
-        <td>Hentai</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Hentai Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/hentai?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr>
-        <td>Hentai V2</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Hentai Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/hentai2?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr>
-        <td>Masturbation</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Masturbation Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/masturbation?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr>
-        <td>Public</td>
-         <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-         <td>Random Public Image ( NSFW )</td>
-         <td>apikey</td>
-         <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-          <td><a target="_blank" href="api/nsfw/public?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-        </tr>
-        <td>Pantsu</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Pantsu Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/pantsu?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Pussy</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Pussy Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/pussy?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Paizuri</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Paizuri Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/paizuri?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Orgy</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Orgy Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/orgy?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Oral</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Oral Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/oral?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Manga</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Manga Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/manga?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Milf</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Milf Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/milf?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Waifu</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Waifu Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/waifu?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Neko</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Neko Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/neko?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Trap</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Trap Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/trap?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Thighs</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Thighs Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/thighs?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Tentacles</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Tentacles Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/tentacles?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>Uniform</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random Uniform Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/uniform?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
-       <td>ZettaiRyouiki</td>
-        <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
-        <td>Random ZettaiRyouiki Image ( NSFW )</td>
-        <td>apikey</td>
-        <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
-         <td><a target="_blank" href="api/nsfw/zettaiRyouiki?apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
-       </tr>
+            <td><a target="_blank" href="api/download/sfiledl?url=https://sfile.mobi/7lKFMNNrxYX&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>XNXX </td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>XNXX Downloader</td>
+            <td>apikey,url</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/download/xnxxdl?url=http://www.xnxx.com/video-131xedbd/junge_leute_gehen_zum_ficken_an_den_strand_hentai/&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>StickerPack</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Get StickerPack</td>
+            <td>apikey,url</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/download/stickerdl?url=https://getstickerpack.com/stickers/pentol-7&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
+            <td>Telegram Stickers</td>
+            <td><div class="btn btn-rounded btn-outline-info">GET</div></td>
+            <td>Get Telegram Stickers</td>
+            <td>apikey,url</td>
+            <td><div class="btn btn-sm-rounded btn-outline-success">Active</div></td>
+            <td><a target="_blank" href="api/download/telesticker?url=https://t.me/addstickers/junpeifrogy&apikey=<%= apikey %>" class=" btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="mdi mdi-arrow-top-right"></a></td>
+            </tr>
         </tbody>
       </table>
       </td>
