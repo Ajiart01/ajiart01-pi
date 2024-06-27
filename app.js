@@ -162,11 +162,11 @@ app.get("/profile", isAuthenticated, async (req, res) => {
 
 //=================[ BOT & GC BOT ]==========\\
 app.get("/botwa", async (req, res) => {
-	res.sendFile(process.cwd() + "/views/botwa.html");
+	res.sendFile(__path + "/views/botwa.html");
 });
 
 app.get("/gcbot", async (req, res) => {
-	res.sendFile(process.cwd() + "/views/gcbot.html");
+	res.sendFile(__path + "/views/gcbot.html");
 });
 
 //===============[ REPORT BUG ]===========\\
@@ -192,7 +192,7 @@ const cpu = require('os').cpus()
         time: `${hour} : ${minute} : ${second}`,        
         speed: `${old - neww}ms`,
         info:{       
-            author: 'Marin Kitagawa'
+            author: 'BGS BOT ENTERTAINMENT'
         }
     }
     res.json(status)
@@ -204,7 +204,7 @@ app.get('/main/runtime', async (req, res, next) => {
 		status: true,
 		runtime: runtime(process.uptime()),
 		info:{       
-            author: 'Marin Kitagawa'            
+            author: 'BGS BOT ENTERTAINMENT'            
         }
     }
     res.json(runtim)
@@ -216,7 +216,7 @@ app.get('/main/uptime', async (req, res, next) => {
 		status: true,
 		uptime: muptime(process.uptime()),
 		info:{       
-            author: 'Marin Kitagawa'            
+            author: 'BGS BOT ENTERTAINMENT'            
         }
     }
     res.json(uptim)
@@ -528,18 +528,18 @@ app.use(function (req, res) {
 
 //===========[Tampilan Logs]==========\\
 app.listen(PORT, () => {
-  cfonts.say('Marin Api', {
+  cfonts.say('BGS BOT Api', {
 	font: 'block',
     gradient: ['red','magenta'],
     align: 'center',
 	})
-	cfonts.say(`Created By Jhnspntx`, {
+	cfonts.say(`Created By Bgsbot`, {
 	font: 'console',
 	align: 'center',
 	gradient: ['red', 'magenta']
 	})
   console.log(color(`Example app listening at http://localhost:${PORT}`,'yellow'));
-  console.log(color(`My Project Website https://api.marinkitagawa.site`,'blue'));
+  console.log(color(`My Project Website https://bgsbot.my.id`,'blue'));
   console.log(color(`Website Online!`,'red'));
  
   //=========[Reset Prem]=========\\
