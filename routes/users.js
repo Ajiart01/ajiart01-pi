@@ -93,8 +93,8 @@ router.post('/register', async (req, res) => {
                 let templateEmail= {
                     from: myEmail,
                     to: email,
-                    subject: 'Verify Email Marin Kitagawa Api',
-                    text: 'Marin Kitagawa Api',
+                    subject: 'Verify Email Bgsbot Api',
+                    text: 'bgsbot Api',
                     html: data,
                 }
                 let path1 = '/users/register'
