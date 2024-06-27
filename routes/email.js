@@ -117,7 +117,7 @@ router.post('/forgotpass', async(req, res) => {
             from: myEmail,
             to: email,
             subject: 'Reset Password Bgsbot API',
-            text: 'Fxacb-Api',
+            text: 'bgsbot-Api',
             html: data,
             attachments: [{
                 filename: 'fxacb.png',
