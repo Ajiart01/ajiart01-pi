@@ -52,8 +52,8 @@ router.post('/emailchange', async(req, res) => {
         let templateEmail= {
             from: myEmail,
             to: newemail,
-            subject: 'Change Email Fxacb-Api',
-            text: 'Fxacb-Api',
+            subject: 'Change Email bgsbot-Api',
+            text: 'bgsbot-Api',
             html: data,
             attachments: [{
                 filename: 'fxacb.png',
@@ -116,7 +116,7 @@ router.post('/forgotpass', async(req, res) => {
         let templateEmail= {
             from: myEmail,
             to: email,
-            subject: 'Reset Password Fxacb-API',
+            subject: 'Reset Password Bgsbot API',
             text: 'Fxacb-Api',
             html: data,
             attachments: [{
