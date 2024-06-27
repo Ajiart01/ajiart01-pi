@@ -145,7 +145,7 @@ app.get('/changelog',isAuthenticated, async (req, res) => {
 //==============[ PROFILE & SETTINGS ]===========\\
 app.get("/profile", isAuthenticated, async (req, res) => {
 	const Users = req.user; 	
-	let identifikasiMember = 'Powered By Johannes'; 
+	let identifikasiMember = 'Powered By BGSBOT ENTERTAINMENT'; 
 
 	res.render('pages/profile', {
 		member: identifikasiMember,
