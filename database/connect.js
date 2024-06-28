@@ -5,8 +5,11 @@ const { dbURI } = require('../lib/settings');
 
 function connectMongoDb() {
    mongoose.connect(dbURI, { 
-      useNewUrlParser: true, 
-      useUnifiedTopology: true,
+      useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000, // Waktu tunggu koneksi
+  socketTimeoutMS: 45000, // Waktu tunggu soket
+});
       useCreateIndex: true
     });
     const db = mongoose.connection;
