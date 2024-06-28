@@ -1,4 +1,4 @@
-const { User, Utils } = require('./model');
+const { User, Utils, Token } = require('./model');
 const toMs = require('ms');
 const { limitCount, limitPremium } = require('../lib/settings');
 const tokens = 'ajiart01';
