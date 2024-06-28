@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { color } = require('../lib/color.js');
-const dbURI = "mongodb+srv://ajifu917:ajifu917@atlascluster.sws1np9.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster";
+const dbURI = "mongodb+srv://marinkitagawa:johannes123@restapi.pbjm0nh.mongodb.net/?retryWrites=true&w=majority";
 
 function connectMongoDb() {
   mongoose.connect(dbURI, {
