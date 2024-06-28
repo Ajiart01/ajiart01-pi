@@ -4,7 +4,7 @@
   "description": "restapi built with express",
   "main": "app.js",
   "scripts": {
-    "start": "node .",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,10 +17,12 @@
   "dependencies": {
     "@bochilteam/scraper": "^3.0.0",
     "@xct007/frieren-scraper": "^0.0.2",
+    "api-rey": "1.1.0",
     "axios": "^0.21.4",
     "base-64": "^1.0.0",
     "base32": "0.0.6",
     "bcryptjs": "^2.4.3",
+    "beta-api": "github:ERLANRAHMAT/beta-apii",
     "canvacord": "^5.3.0",
     "canvas": "^2.11.2",
     "canvas-gif": "github:AlipBot/canvas-gif-attp",
@@ -46,12 +48,17 @@
     "express-rate-limit": "^5.3.0",
     "express-recaptcha": "^5.0.2",
     "express-session": "^1.17.2",
+    "fbdl-core": "^1.0.2",
     "figlet": "^1.5.2",
     "form-data": "^4.0.0",
     "fs": "0.0.1-security",
     "fs-extra": "^10.0.0",
+    "g-i-s": "^2.1.6",
+    "genius-lyrics": "^4.2.7",
     "google-it": "^1.6.4",
     "got": "^12.6.0",
+    "hikki-me": "^2.0.0",
+    "hxz-api": "^1.0.1",
     "image-url-validator": "^1.0.4",
     "instatouch": "^2.3.3",
     "is-number": "^7.0.0",
@@ -66,8 +73,13 @@
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "mongodb": "^3.6.3",
-    "mongoose": "^8.4.4",
+    "mongoose": "^5.13.5",
+    "monk": "^7.3.3",
+    "morgan": "^1.10.0",
+    "needle": "^2.6.0",
+    "nekobocc": "^1.4.0",
     "nekopoi-scraper": "^2.7.1",
+    "nhentai-node-api": "^1.1.2",
     "node-cron": "^3.0.2",
     "node-fetch": "^2.6.1",
     "node-schedule": "^2.0.0",
@@ -87,8 +99,10 @@
     "scrape-primbon": "^1.1.0",
     "soundoftext-js": "^1.0.2",
     "ssl-express-www": "^3.0.7",
+    "tiktok-scraper": "^1.4.12",
     "urlencode": "^1.1.0",
     "ytdl-core": "^4.11.5",
-    "yuri-canvas": "^4.0.6"
+    "yuri-canvas": "^4.0.6",
+    "zrapi": "0.0.6"
   }
 }
