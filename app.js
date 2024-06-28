@@ -28,7 +28,7 @@ const userRouters = require('./routes/users');
 //const premiumRouters = require('./routes/premium');
 const authRouters = require('./routes/email');
 const { User } = require("./database/model");
-const loginRouter = require('./routes/users'); // Tambahkan ini
+//const loginRouter = require('./routes/users'); // Tambahkan ini
 //==============[Summon File]=========\\
 const { isAuthenticated } = require('./lib/auth');
 const { connectMongoDb } = require('./database/connect');
@@ -55,10 +55,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayout);
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', loginRouter); // Tambahkan ini
+app.use(express.static('public'));
+
 app.use(ignoreFavicon);
 
 app.use(session({
