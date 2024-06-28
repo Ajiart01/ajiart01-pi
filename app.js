@@ -1,6 +1,7 @@
 __path = process.cwd()
 //==========[Module Api]=========\\
 const express = require('express');
+const path = require('path');
 const app = express();
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -54,9 +55,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.set('view engine', 'ejs');
-app.set('views', __path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayout);
-app.use(express.static(__path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', loginRouter); // Tambahkan ini
 app.use(ignoreFavicon);
 
