@@ -1,176 +1,129 @@
-const { User, Utils, Token } = require('./model');
+const { User, Utils } = require('./model');
 const toMs = require('ms');
 const { limitCount, limitPremium } = require('../lib/settings');
-const tokens = 'ajiart01';
-module.exports.tokens = tokens;
+const e = require('connect-flash');
+const tokens = 'ajiart01'
+module.exports.tokens = tokens
 
-async function addPremium(username, customKey, expired) {
-    try {
-        await User.updateOne(
-            { username: username },
-            { apikey: customKey, premium: Date.now() + toMs(expired), limit: limitPremium }
-        );
-    } catch (err) {
-        console.error('Error in addPremium:', err);
+    async function addPremium(username, customKey, expired) {
+        User.updateOne({username: username}, {apikey: customKey, premium: Date.now() + toMs(expired), limit: limitPremium}, function (err, res) {
+            if (err) throw err;
+        })
     }
-}
-module.exports.addPremium = addPremium;
+    module.exports.addPremium = addPremium
 
-async function ExpiredTime() {
-    try {
+    async function ExpiredTime() {
         let users = await User.find({});
-        for (const data of users) {
-            const { premium, defaultKey, username } = data;
-            if (premium && Date.now() >= premium) {
-                await User.updateOne(
-                    { username: username },
-                    { apikey: defaultKey, premium: null, limit: limitCount }
-                );
-                console.log(`Masa Premium ${username} sudah habis`);
+        users.forEach(async(data) => {
+            let { premium, defaultKey, username } = data
+            if (!premium || premium === null) return
+            if (Date.now() >= premium) {
+                User.updateOne({username: username}, {apikey: defaultKey, premium: null, limit: limitCount}, function (err, res) {
+                    if (err) throw err;
+                    console.log(`Masa Premium ${username} sudah habis`)
+                })
             }
+        })
+    }
+    module.exports.ExpiredTime = ExpiredTime
+
+    async function deletePremium(username) {
+        let users = await User.findOne({username: username});
+        let key = users.defaultKey
+        User.updateOne({username: username}, {apikey: key, premium: null, limit: limitCount}, function (err, res) {
+            if (err) throw err;
+        })
+    }
+    module.exports.deletePremium = deletePremium
+
+    async function checkPremium(username) {
+        let users = await User.findOne({username: username});
+        if (users.premium === null) {
+            return false;
+        } else {
+            return true;
+        };
+    };
+    module.exports.checkPremium = checkPremium;
+
+    async function changeKey(username, key) {
+        User.updateOne({username: username}, {apikey: key}, function (err, res) {
+            if (err) throw err;
+        });
+    }
+    module.exports.changeKey = changeKey
+
+    async function resetOneLimit(username) {
+        let users = await User.findOne({username: username});
+        if (users !== null) {
+            User.updateOne({username: username}, {limit: limitCount}, function (err, res) {
+                if (err) throw err;
+            });
         }
-    } catch (err) {
-        console.error('Error in ExpiredTime:', err);
     }
-}
-module.exports.ExpiredTime = ExpiredTime;
+    module.exports.resetOneLimit = resetOneLimit
 
-async function deletePremium(username) {
-    try {
-        let user = await User.findOne({ username: username });
-        if (user) {
-            await User.updateOne(
-                { username: username },
-                { apikey: user.defaultKey, premium: null, limit: limitCount }
-            );
+    /* UTILS, TOTAL REQ ETC */
+
+    async function getTotalUser() {
+        let db = await User.find({});
+        return db.length
+    }
+    module.exports.getTotalUser = getTotalUser
+
+    async function addUtil() {
+        let db = await Utils.find({});
+        if (db.length == 0) { 
+            let obj = { total: 0, today: 0, visitor: 1, util: 'util'}
+            Utils.create(obj)
+            console.log(`[INFO] Utils Created!`)
         }
-    } catch (err) {
-        console.error('Error in deletePremium:', err);
     }
-}
-module.exports.deletePremium = deletePremium;
+    module.exports.addUtil = addUtil
 
-async function checkPremium(username) {
-    try {
-        let user = await User.findOne({ username: username });
-        return user && user.premium !== null;
-    } catch (err) {
-        console.error('Error in checkPremium:', err);
-        return false;
-    }
-}
-module.exports.checkPremium = checkPremium;
-
-async function changeKey(username, key) {
-    try {
-        await User.updateOne({ username: username }, { apikey: key });
-    } catch (err) {
-        console.error('Error in changeKey:', err);
-    }
-}
-module.exports.changeKey = changeKey;
-
-async function resetOneLimit(username) {
-    try {
-        await User.updateOne({ username: username }, { limit: limitCount });
-    } catch (err) {
-        console.error('Error in resetOneLimit:', err);
-    }
-}
-module.exports.resetOneLimit = resetOneLimit;
-
-/* UTILS, TOTAL REQ ETC */
-
-async function getTotalUser() {
-    try {
-        let users = await User.find({});
-        return users.length;
-    } catch (err) {
-        console.error('Error in getTotalUser:', err);
-        return 0;
-    }
-}
-module.exports.getTotalUser = getTotalUser;
-
-async function addUtil() {
-    try {
+    async function getTotalReq() {
         let db = await Utils.find({});
-        if (db.length === 0) {
-            let obj = { total: 0, today: 0, visitor: 1, util: 'util' };
-            await Utils.create(obj);
-            console.log('[INFO] Utils Created!');
-        }
-    } catch (err) {
-        console.error('Error in addUtil:', err);
+        return db[0].total
     }
-}
-module.exports.addUtil = addUtil;
+    module.exports.getTotalReq = getTotalReq
 
-async function getTotalReq() {
-    try {
+    async function getTodayReq() {
+        let db = await Utils.find({})
+        return db[0].today
+    }
+    module.exports.getTodayReq = getTodayReq
+
+    async function getVisitor() {
+        let db = await Utils.find({})
+        return db[0].visitor
+    }
+    module.exports.getVisitor = getVisitor
+
+    async function addRequest() {
+        let db = await Utils.find({})
+        let addOneToday = db[0].today += 1
+        let addOneTotal = db[0].total += 1
+        Utils.updateOne({util: 'util'}, {total: addOneTotal, today: addOneToday}, (err, res) => {
+            if (err) throw err
+        })
+    }
+    module.exports.addRequest = addRequest
+
+    async function addVisitor() {
+        let db = await Utils.find({})
+        let addOne = db[0].visitor += 1
+        Utils.updateOne({util: 'util'}, {visitor: addOne}, (err, res) => {
+            if (err) throw err
+        })
+    }
+    module.exports.addVisitor = addVisitor
+
+    async function resetTodayReq() {
         let db = await Utils.find({});
-        return db.length > 0 ? db[0].total : 0;
-    } catch (err) {
-        console.error('Error in getTotalReq:', err);
-        return 0;
+        let now = db[0].today
+        let zero = db[0].today -= now
+        Utils.updateOne({util: 'util'}, {today: zero}, (err, res) => {
+            if (err) throw err
+        })
     }
-}
-module.exports.getTotalReq = getTotalReq;
-
-async function getTodayReq() {
-    try {
-        let db = await Utils.find({});
-        return db.length > 0 ? db[0].today : 0;
-    } catch (err) {
-        console.error('Error in getTodayReq:', err);
-        return 0;
-    }
-}
-module.exports.getTodayReq = getTodayReq;
-
-async function getVisitor() {
-    try {
-        let db = await Utils.find({});
-        return db.length > 0 ? db[0].visitor : 0;
-    } catch (err) {
-        console.error('Error in getVisitor:', err);
-        return 0;
-    }
-}
-module.exports.getVisitor = getVisitor;
-
-async function addRequest() {
-    try {
-        let db = await Utils.find({});
-        if (db.length > 0) {
-            db[0].today += 1;
-            db[0].total += 1;
-            await Utils.updateOne({ util: 'util' }, { total: db[0].total, today: db[0].today });
-        }
-    } catch (err) {
-        console.error('Error in addRequest:', err);
-    }
-}
-module.exports.addRequest = addRequest;
-
-async function addVisitor() {
-    try {
-        let db = await Utils.find({});
-        if (db.length > 0) {
-            db[0].visitor += 1;
-            await Utils.updateOne({ util: 'util' }, { visitor: db[0].visitor });
-        }
-    } catch (err) {
-        console.error('Error in addVisitor:', err);
-    }
-}
-module.exports.addVisitor = addVisitor;
-
-async function resetTodayReq() {
-    try {
-        await Utils.updateOne({ util: 'util' }, { today: 0 });
-    } catch (err) {
-        console.error('Error in resetTodayReq:', err);
-    }
-}
-module.exports.resetTodayReq = resetTodayReq;
+    module.exports.resetTodayReq = resetTodayReq
