@@ -54,9 +54,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', __path.join(__dirname, 'views'));
 app.use(expressLayout);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__path.join(__dirname, 'public')));
 app.use('/', loginRouter); // Tambahkan ini
 app.use(ignoreFavicon);
 
