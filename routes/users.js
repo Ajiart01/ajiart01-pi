@@ -1,3 +1,4 @@
+__path = process.cwd()
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
@@ -29,7 +30,7 @@ const {
 let tokenize = new Array();
 
 router.get("/", async (req, res) => {
-	res.sendFile(process.cwd() + "/views/index.html");
+	res.sendFile(__path + "/views/index.html");
 });
 
 
