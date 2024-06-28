@@ -1,7 +1,8 @@
-__path = process.cwd()
+
 //==========[Module Api]=========\\
 const express = require('express');
 const path = require('path');
+const __path = path.resolve(__dirname);
 const app = express();
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
