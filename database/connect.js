@@ -12,13 +12,16 @@ function connectMongoDb() {
            w: 'majority',
            wtimeout: 5000,
        },
+   })
+   .then(() => {
+       console.log(color('[INFO] Connect to DB success!','red'));
+   })
+   .catch((error) => {
+       console.error('Connection error:', error);
    });
-   
+
    const db = mongoose.connection;
    db.on('error', console.error.bind(console, 'connection error:'));
-   db.once('open', () => {
-      console.log(color('[INFO] Connect to DB success!','red'));
-   });
 };
 
 module.exports.connectMongoDb = connectMongoDb;
