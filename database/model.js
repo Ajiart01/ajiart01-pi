@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const { expiredTokenDb } = require('../lib/settings');
+const { limitCount, expiredTokenDb } = require('../lib/settings');
 
-// Skema Users
 const UsersSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -13,7 +12,6 @@ const UsersSchema = new mongoose.Schema({
 }, { versionKey: false, timestamps: true });
 module.exports.User = mongoose.model('User', UsersSchema);
 
-// Skema Utils
 const UtilsSchema = new mongoose.Schema({
     total: { type: Number, default: 0 },
     today: { type: Number, default: 0 },
@@ -22,7 +20,6 @@ const UtilsSchema = new mongoose.Schema({
 }, { versionKey: false });
 module.exports.Utils = mongoose.model('Util', UtilsSchema);
 
-// Skema Token
 const TokenSchema = new mongoose.Schema({
     token: { type: String, required: true, unique: true },
     expire_at: {
