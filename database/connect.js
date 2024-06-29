@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
 const { color } = require('../lib/color.js');
-const { dbURI } = require('../lib/settings');
+//const { dbURI } = require('../lib/settings');
 
+const uri = 'mongodb+srv://ajifu917:ajifu917@atlascluster.sws1np9.mongodb.net/?retryWrites=true&w=majority';
 function connectMongoDb() {
-  mongoose.connect(dbURI, { 
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000, // Waktu tunggu koneksi
-    socketTimeoutMS: 45000, // Waktu tunggu soket
-    useCreateIndex: true // Pastikan ini berada di dalam objek konfigurasi
-  }).then(() => {
+  mongoose.connectMongoDb(uri).then(() => {
     console.log(color('[INFO] Connect to DB success!', 'red'));
   }).catch(err => {
     console.error('Failed to connect to MongoDB', err);
