@@ -5,22 +5,10 @@ const { color } = require('../lib/color.js');
 const uri = 'mongodb+srv://ajifu917:ajifu917@atlascluster.sws1np9.mongodb.net/myDatabase?retryWrites=true&w=majority';
 
 function connectMongoDb() {
-    mongoose.connect(uri, { 
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 30000, // Tingkatkan timeout koneksi
-        socketTimeoutMS: 45000,         // Menambahkan timeout soket
-        writeConcern: {
-            w: 'majority',
-            wtimeout: 5000,
-        },
-    })
-    .then(() => {
-        console.log(color('[INFO] Connect to DB success!','red'));
-    })
-    .catch((error) => {
-        console.error('Connection error:', error);
-    });
+    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, bufferCommands: false })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('Connection error: ' + err.message));
+
 
     const db = mongoose.connection;
     db.on('error', (error) => {
