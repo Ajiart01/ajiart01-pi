@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const { color } = require('../lib/color.js');
-// const { dbURI } = require('../lib/settings');
-const uri = 'mongodb+srv://ajifu917:ajifu917@atlascluster.sws1np9.mongodb.net/?retryWrites=true&w=majority';
+
+// Perbarui URL koneksi MongoDB Atlas dengan yang direkomendasikan
+const uri = 'mongodb+srv://ajifu917:ajifu917@atlascluster.sws1np9.mongodb.net/myDatabase?retryWrites=true&w=majority';
 
 function connectMongoDb() {
    mongoose.connect(uri, { 
        useNewUrlParser: true,
        useUnifiedTopology: true,
-       serverSelectionTimeoutMS: 30000, // Tambahkan ini untuk mengatur timeout koneksi
+       serverSelectionTimeoutMS: 30000, // Sesuaikan timeout koneksi
        writeConcern: {
            w: 'majority',
            wtimeout: 5000,
