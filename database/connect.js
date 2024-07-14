@@ -9,7 +9,7 @@ async function connectMongoDb() {
         await mongoose.connect(uri, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            bufferCommands: false
+            bufferCommands: true
         });
 
         console.log('MongoDB connected');
